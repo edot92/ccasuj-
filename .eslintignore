@@ -1,0 +1,9 @@
+nuxt.config.js
+node_modules/*
+node_modules
+**/*.vue
+***/**/*.vue
+***/**/*.js
+pages/***/**/*.js
+store/*.js
+build/*
