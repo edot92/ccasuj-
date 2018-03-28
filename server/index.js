@@ -1,3 +1,4 @@
+require('dotenv').config()
 import express from 'express'
 import { Nuxt, Builder } from 'nuxt'
 
@@ -30,11 +31,11 @@ if (config.dev) {
 // Give nuxt middleware to express
 app.use(nuxt.render)
 var io = require('socket.io')()
-io.on('connection', function (client) {
-  client.on('event', function (data) {
+io.on('connection', function(client) {
+  client.on('event', function(data) {
     console.log(data)
   })
-  client.on('disconnect', function () {
+  client.on('disconnect', function() {
     console.log('disconnect')
   })
   console.log('ada klient')
